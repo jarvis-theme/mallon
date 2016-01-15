@@ -120,7 +120,7 @@
                                 <ul class="dropdown-menu">
                                     @foreach($allmenu->anak as $submenu)
                                     @if($submenu->parent == $allmenu->id)
-                                    <li class="dropdown-submenu">
+                                    <li {{$submenu->anak->count() > 0 ? 'class="dropdown-submenu"' : ''}}>
                                         <a href="{{category_url($submenu)}}">{{ $submenu->nama }}</a>
                                         @if($submenu->anak->count() > 0)
                                         <ul class="dropdown-menu">
