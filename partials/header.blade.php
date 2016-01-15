@@ -46,7 +46,7 @@
                                     <ul>
                                         @foreach($msubmenu->anak as $msubmenu2)
                                         @if($msubmenu2->parent == $msubmenu->id)
-                                        <li><a href="{{category_menu($msubmenu2)}}">{{$msubmenu2->nama}}</a></li>
+                                        <li><a href="{{category_url($msubmenu2)}}">{{$msubmenu2->nama}}</a></li>
                                         @endif
                                         @endforeach
                                     </ul>
