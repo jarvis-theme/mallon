@@ -40,7 +40,7 @@
             </div>
             <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8">
                 <div id="single-typical">
-                    <div class="tabs-title-typical"><h1>Testimonial</h1></div>
+                    <div><h1>Testimonial</h1></div>
                     @foreach (list_testimonial() as $items)  
                     <div class="quote-testimo">
                         <blockquote>{{$items->isi}}</blockquote>

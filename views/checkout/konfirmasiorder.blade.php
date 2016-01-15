@@ -92,7 +92,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5">
-                    @if($order->jenisPembayaran==1)
+                    @if($order->jenisPembayaran == 1 && $order->status == 0)
                         @if($checkouttype==1)   
                         {{-- */ $konfirmasi = 'konfirmasiorder/' /* --}}
                         @else                         

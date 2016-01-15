@@ -128,3 +128,4 @@
         </div>
     </div>
 </footer>
+{{pluginPowerup()}}

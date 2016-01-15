@@ -1199,7 +1199,7 @@ footer .copyright p {margin:0}
 	nav#menu ul.navbar-nav > li > .dropdown-menu li:last-child {border-bottom:none}
 	nav#menu ul.navbar-nav > li > .dropdown-menu li a {font-size:14px;}
     #more_info ul.nav-tabs li.active a{font-size: 13px}#more_info ul.nav-tabs li a{padding: 10px 15px}
-    .supplier_block .content h4{font-size: 13px}.supplier_block .content p{font-size: 13px}#related-product > h2{font-size: 20px}
+    .supplier_block .content h4{font-size: 13px}.supplier_block .content p{font-size: 13px; height: 32px}#related-product > h2{font-size: 20px}
 }
 
 @media screen and (max-width: 640px) {
@@ -1252,4 +1252,4 @@ footer .copyright p {margin:0}
 #top-head .user-info ul li{display: inline-block}
 #top-head .user-info ul li a{color: #fff}
 #top-head .user-info ul li a:hover {color:#bbe073}
-.user-welcome{margin: 0 10px}
+.user-welcome{margin: 0 10px}#zeropadding{padding: 0}

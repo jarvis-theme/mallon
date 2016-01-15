@@ -41,7 +41,7 @@
                             @if($i == 0)
                             <div id="left-g" class="col-xs-40 col-sm-40">
                                 <a class="img-home" href="{{product_url($best)}}" title="{{$best->nama}}">
-                                    <img class="img-responsive imgwidth" src="{{product_image_url($best->gambar1,'medium')}}" srcset="{{product_image_url($best->gambar1, 'thumb')}} 360w, {{product_image_url($best->gambar1, 'medium')}} 768w, {{product_image_url($best->gambar1, 'large')}} 1200w" width="463" alt="{{$best->nama}}">
+                                    <img class="img-responsive" src="{{product_image_url($best->gambar1,'medium')}}" srcset="{{product_image_url($best->gambar1, 'thumb')}} 360w, {{product_image_url($best->gambar1, 'medium')}} 768w, {{product_image_url($best->gambar1, 'large')}} 1200w" width="463" alt="{{$best->nama}}">
                                     <div class="capt-btm main-capt">
                                         <span class="name fl">{{$best->nama}}</span>
                                         <span class="price fr">{{price($best->hargaJual)}}</span>
@@ -86,7 +86,7 @@
                             @if($j == 0)
                             <div id="left-g" class="col-xs-40 col-sm-40">
                                 <a class="img-home" href="{{product_url($new)}}" title="{{$new->nama}}">
-                                    <img class="img-responsive imgwidth" src="{{product_image_url($new->gambar1, 'medium')}}" srcset="{{product_image_url($new->gambar1, 'thumb')}} 360w, {{product_image_url($new->gambar1, 'medium')}} 768w, {{product_image_url($new->gambar1, 'large')}} 1200w" width="463" alt="{{$new->nama}}">
+                                    <img class="img-responsive" src="{{product_image_url($new->gambar1, 'medium')}}" srcset="{{product_image_url($new->gambar1, 'thumb')}} 360w, {{product_image_url($new->gambar1, 'medium')}} 768w, {{product_image_url($new->gambar1, 'large')}} 1200w" width="463" alt="{{$new->nama}}">
                                     <div class="capt-btm main-capt">
                                         <span class="name fl">{{$new->nama}}</span>
                                         <span class="price fr">{{price($new->hargaJual)}}</span>
@@ -131,7 +131,7 @@
                             @if($k == 0)
                             <div id="left-g" class="col-xs-40 col-sm-40">
                                 <a class="img-home" href="{{product_url($home)}}" title="{{$home->nama}}">
-                                    <img class="img-responsive imgwidth" src="{{product_image_url($home->gambar1, 'medium')}}" srcset="{{product_image_url($home->gambar1, 'thumb')}} 360w, {{product_image_url($home->gambar1, 'medium')}} 768w, {{product_image_url($home->gambar1, 'large')}} 1200w" width="463" alt="{{$home->nama}}">
+                                    <img class="img-responsive" src="{{product_image_url($home->gambar1, 'medium')}}" srcset="{{product_image_url($home->gambar1, 'thumb')}} 360w, {{product_image_url($home->gambar1, 'medium')}} 768w, {{product_image_url($home->gambar1, 'large')}} 1200w" width="463" alt="{{$home->nama}}">
                                     <div class="capt-btm main-capt">
                                         <span class="name fl">{{$home->nama}}</span>
                                         <span class="price fr">{{price($home->hargaJual)}}</span>

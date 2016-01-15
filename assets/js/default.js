@@ -14,7 +14,7 @@ define(['jquery','fancybox','carousel','bootstrap','modernizr','scrollto','mmenu
             $('#thumb-list').owlCarousel({
                 itemsCustom : [
                     [320, 2],
-                    [360, 3],
+                    [360, 2],
                     [600, 4],
                     [700, 4],
                     [1000, 4],

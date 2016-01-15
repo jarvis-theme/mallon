@@ -10,7 +10,7 @@
             @if( is_login() )
             <div class="user-info fr">
                 <ul>
-                    <li>Selamat Datang, <strong>{{user()->nama}}</strong></li>
+                    <li>Selamat Datang, <strong><a href="{{url('member')}}">{{user()->nama}}</a></strong></li>
                     <span class="user-welcome">|</span>
                     <li><a href="{{url('logout')}}">Logout</a></li>
                 </ul>
