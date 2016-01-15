@@ -7,7 +7,7 @@ return array(
 	"num_display" => array(
 		"home_product"=>"8",
 		"main_product"=>"20",
-		"related_product"=>"5",
+		"related_product"=>"4",
 		"latest_product"=>"5",
 		"bestseller"=>"5",
 		"featured"=>"5",
