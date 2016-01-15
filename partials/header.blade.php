@@ -11,6 +11,7 @@
             <div class="user-info fr">
                 <ul>
                     <li>Selamat Datang, <strong>{{user()->nama}}</strong></li>
+                    <span class="user-welcome">|</span>
                     <li><a href="{{url('logout')}}">Logout</a></li>
                 </ul>
             </div>

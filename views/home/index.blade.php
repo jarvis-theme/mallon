@@ -142,7 +142,7 @@
                                 <div class="row">
                             @else
                                     <div class="col-xs-20 col-sm-20">
-                                        <a class="rel_block" href="{{product_url($new)}}" title="Lihat Detail">
+                                        <a class="rel_block" href="{{product_url($home)}}" title="Lihat Detail">
                                             <img class="img-responsive imgwidth" src="{{product_image_url($home->gambar1, 'medium')}}" srcset="{{product_image_url($home->gambar1, 'thumb')}} 768w, {{product_image_url($home->gambar1, 'large')}} 1200w" alt="{{$home->nama}}">
                                             <div class="capt-btm">
                                                 <span class="nametag name fl">{{short_description($home->nama, 15)}}</span>
