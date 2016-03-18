@@ -7,7 +7,7 @@
                 <div id="best-seller" class="block">
                     <div class="title"><h2>Produk <strong>Terlaris</strong></h2></div>
                     <ul class="block-content">
-                        @foreach(best_seller() as $bestproduk)
+                        @foreach(best_seller(5, null) as $bestproduk)
                         <li>
                             <a href="{{product_url($bestproduk)}}">
                                 <div class="img-block">
@@ -40,7 +40,7 @@
             </div>
             <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8">
                 <div class="register-page">
-                    <article class="col-lg-12 col-md-12 col-xs-12">
+                    <!-- <article class="col-lg-12 col-md-12 col-xs-12">
                         <h2>Kebijakan Layanan</h2>
                         <p>{{$service->tos}}</p>
                     </article>
@@ -55,7 +55,51 @@
                     <article class="col-lg-12 col-md-12 col-xs-12">
                         <h2>Kebijakan Privasi</h2>
                         <p>{{$service->privacy}}</p>
-                    </article>
+                    </article> -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h2 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Kebijakan Layanan
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p>{{$service->tos}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h2 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Kebijakan Pengembalian
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p>{{$service->refund}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h2 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Kebijakan Privasi
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p>{{$service->privacy}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

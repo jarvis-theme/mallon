@@ -7,7 +7,7 @@
                 <div id="best-seller" class="block">
                     <div class="title"><h2>Produk <strong>Terlaris</strong></h2></div>
                     <ul class="block-content">
-                        @foreach(best_seller() as $bestproduk)
+                        @foreach(best_seller(5,null) as $bestproduk)
                         <li>
                             <a href="{{product_url($bestproduk)}}">
                                 <div class="img-block">

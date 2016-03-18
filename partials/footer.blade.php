@@ -5,24 +5,24 @@
                 <h5>Metode Pembayaran</h5>
                 @if(list_banks()->count() > 0)
                     @foreach(list_banks() as $bank)
-                    <img class="img-responsive payment" src="{{bank_logo($bank)}}" alt="Metode Pembayaran" title="{{$bank->bankdefault->nama}}">
+                    <img class="img-responsive payment" src="{{bank_logo($bank)}}" alt="{{$bank->bankdefault->nama}}" title="{{$bank->bankdefault->nama}}">
                     @endforeach
                 @endif
                 @if(list_payments()->count() > 0)
                     @foreach(list_payments() as $pay)
                         @if($pay->nama == 'paypal' && $pay->aktif == 1)
-                        <img class="img-responsive payment" src="{{url('img/bank/paypal.png')}}" alt="Metode Pembayaran" title="Paypal">
+                        <img class="img-responsive payment" src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Paypal">
                         @endif
                         @if($pay->nama == 'ipaymu' && $pay->aktif == 1)
-                        <img class="img-responsive payment" src="{{url('img/bank/ipaymu.jpg')}}" alt="Metode Pembayaran" title="Ipaymu">
+                        <img class="img-responsive payment" src="{{url('img/bank/ipaymu.jpg')}}" alt="Ipaymu" title="Ipaymu">
                         @endif
                         @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                        <img class="img-responsive payment" src="{{url('img/bitcoin.png')}}" alt="Metode Pembayaran" title="Bitcoin">
+                        <img class="img-responsive payment" src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Bitcoin">
                         @endif
                     @endforeach
                 @endif
                 @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-                    <img class="img-responsive payment" src="{{url('img/bank/doku.jpg')}}" alt="Metode Pembayaran" title="Doku">
+                    <img class="img-responsive payment" src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku">
                 @endif
             </div>
             <div class="col-xs-5 col-sm-5">
@@ -117,6 +117,9 @@
                             Email : <a href="mailto:{{$kontak->email}}"> {{$kontak->email}}</a><br>
                             Alamat : {{$kontak->alamat}}
                         </p>
+                        @if(!empty($kontak->ym))
+                        <p>{{ ymyahoo($kontak->ym) }}</p>
+                        @endif
                     </div>
                 </div>            
             </div>

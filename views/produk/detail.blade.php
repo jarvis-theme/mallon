@@ -13,28 +13,28 @@
                                         @if($produk->gambar1 != '')
                                         <li class="item">
                                             <a class="zoom fancybox" href="{{product_image_url($produk->gambar1,'large')}}" title="{{$produk->nama}}">
-                                            {{HTML::image(product_image_url($produk->gambar1,'medium'),'gambar1',array('width'=>'130', 'height'=>'174'))}}
+                                            {{HTML::image(product_image_url($produk->gambar1,'thumb'),'gambar1',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar2 != '')
                                         <li class="item">
                                             <a class="zoom fancybox" href="{{product_image_url($produk->gambar2,'large')}}" title="{{$produk->nama}}">
-                                            {{HTML::image(product_image_url($produk->gambar2,'medium'),'gambar2',array('width'=>'130', 'height'=>'174'))}}
+                                            {{HTML::image(product_image_url($produk->gambar2,'thumb'),'gambar2',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar3 != '')
                                         <li class="item">
                                             <a class="zoom fancybox" href="{{product_image_url($produk->gambar3,'large')}}" title="{{$produk->nama}}">
-                                            {{HTML::image(product_image_url($produk->gambar3,'medium'),'gambar3',array('width'=>'130', 'height'=>'174'))}}
+                                            {{HTML::image(product_image_url($produk->gambar3,'thumb'),'gambar3',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar4 != '')
                                         <li class="item">
                                             <a class="zoom fancybox" href="{{product_image_url($produk->gambar4,'large')}}" title="{{$produk->nama}}">
-                                            {{HTML::image(product_image_url($produk->gambar4,'medium'),'gambar4',array('width'=>'130', 'height'=>'174'))}}
+                                            {{HTML::image(product_image_url($produk->gambar4,'thumb'),'gambar4',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
@@ -45,10 +45,10 @@
                                 <h2 class="name-title">{{$produk->nama}}</h2>
                                 <div class="content_price">
                                     <span class="lbl"><strong>Harga :</strong></span>
-                                    @if(!empty($produk->gargaCoret))
+                                    <span class="price">{{price($produk->hargaJual)}}</span>
+                                    @if(!empty($produk->hargaCoret))
                                     <span class="old-price">{{price($produk->hargaCoret)}}</span>
                                     @endif
-                                    <span class="price">{{price($produk->hargaJual)}}</span>
                                 </div>
                                 
                                 <div class="desc-prod">
@@ -145,7 +145,7 @@
                     <h2>Produk Sejenis Lainnya</h2>
                     <div class="row">
                         <ul class="grid">
-                            @foreach(other_product($produk) as $relproduk)
+                            @foreach(other_product($produk, 8) as $relproduk)
                             <li class="col-md-3 col-sm-6 col-xs-6">
                                 <div class="prod-container">
                                     <a href="{{product_url($relproduk)}}">
