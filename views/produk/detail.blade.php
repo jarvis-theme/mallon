@@ -77,9 +77,9 @@
                                     <div class="form-group">
                                         <label class="control-label">Jumlah :</label>
                                         <div class="inlineblock">
-                                            <button type='button' class='qtyminus' field='qty' /><i class="fa fa-caret-left"></i></button>
-                                            <input type='text' name='qty' value='1' class='qty' />
-                                            <button type='button' value='+' class='qtyplus' field='qty' /><i class="fa fa-caret-right"></i></button>
+                                            <button type="button" class="qtyminus" field="qty" /><i class="fa fa-caret-left"></i></button>
+                                            <input type="text" name="qty" value="1" class="qty" />
+                                            <button type="button" value="+" class="qtyplus" field="qty" /><i class="fa fa-caret-right"></i></button>
                                         </div>
                                         <span class="clearfix"></span>
                                      </div>
@@ -106,13 +106,13 @@
                                 <div class="supplier_block">
                                     <div class="content">
                                         <div>
-                                            {{ sosialShare(product_url($produk)) }}
+                                            {{ sosialShare(product_url($produk)) }} 
                                         </div>
                                         <p class="n_supplier"></p>
                                         <div class="packing">
                                             <h4>Detail Barang</h4>
                                             <p>Berat (gram) : {{ $produk->berat }}</p>
-                                            <p>Vendor : {{ $produk->vendor == '' ? '' : $produk->vendor }}</p>
+                                            <p>Brand : {{ $produk->vendor == '' ? '' : $produk->vendor }}</p>
                                         </div>
                                         <div class="est_shipping">
                                             <h4>Pengiriman</h4>
@@ -136,7 +136,7 @@
                             <p>{{$produk->deskripsi}}</p>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="reviews">
-                            {{ pluginTrustklik() }}
+                            {{ pluginComment(product_url($produk), @$produk) }}
                         </div>
                     </div>
                 </div>

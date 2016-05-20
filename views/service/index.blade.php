@@ -40,22 +40,6 @@
             </div>
             <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8">
                 <div class="register-page">
-                    <!-- <article class="col-lg-12 col-md-12 col-xs-12">
-                        <h2>Kebijakan Layanan</h2>
-                        <p>{{$service->tos}}</p>
-                    </article>
-                    <div class="clearfix"></div>
-                    <hr>
-                    <article class="col-lg-12 col-md-12 col-xs-12">
-                        <h2>Kebijakan Pengembalian</h2>
-                        <p>{{$service->refund}}</p>
-                    </article>
-                    <div class="clearfix"></div>
-                    <hr>
-                    <article class="col-lg-12 col-md-12 col-xs-12">
-                        <h2>Kebijakan Privasi</h2>
-                        <p>{{$service->privacy}}</p>
-                    </article> -->
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">

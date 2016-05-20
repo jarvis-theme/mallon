@@ -13,11 +13,14 @@ define(['jquery','fancybox','carousel','bootstrap','modernizr','scrollto','mmenu
 
             $('#thumb-list').owlCarousel({
                 itemsCustom : [
+                    [240, 1],
                     [320, 2],
                     [360, 2],
-                    [600, 4],
-                    [700, 4],
-                    [1000, 4],
+                    [480, 4],
+                    [600, 5],
+                    [700, 6],
+                    [768, 2],
+                    [1000, 2],
                     [1200, 3],
                     [1400, 3]
                 ],
@@ -29,12 +32,13 @@ define(['jquery','fancybox','carousel','bootstrap','modernizr','scrollto','mmenu
             $('#menu-mobile').mmenu({
                 extensions  : [ 'effect-slide-menu', 'pageshadow' ],
                 counters    : true,
-                navbar      : {
-                    // title        : 'Advanced menu'
-                },
                 navbars     : [
                     { position    : 'top', }
                 ]
+            }, {
+                offCanvas: {
+                    pageSelector: ".page"
+                }
             });
 
             $('footer h4.title').click(function() {
@@ -89,6 +93,6 @@ define(['jquery','fancybox','carousel','bootstrap','modernizr','scrollto','mmenu
                 }
             });
 
-        };        
+        };
     }
 });

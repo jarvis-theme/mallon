@@ -234,7 +234,7 @@ nav#menu ul.navbar-nav li.active a  {color:#000}
 	padding:0;
 	min-height:380px;
 }
-.navbar-nav > li > .dropdown-menu li{padding:0 10px;}
+.navbar-nav > li > .dropdown-menu li{padding:0 10px; position: relative;}
 nav#menu ul.navbar-nav li ul li a{border:none; margin:0; padding:10px 25px 10px 5px; text-transform:none; color:#fff; background: url("../images/line-menu.jpg") repeat-x scroll center bottom; font-size:13px;}
 nav#menu ul.navbar-nav li ul li:last-child a {background:none}
 nav#menu ul.navbar-nav li ul li a:hover {border:none}
@@ -806,8 +806,8 @@ nav#menu .icon-menu img,
 	font-weight:bold
 }
 .pagination ul li.active a, .pagination ul li.active span {background:#25c1cb; color:#fff}
-.pagination ul li.previous , .pagination ul li.next, .pagination ul li.disabled {margin-top:5px;}
-.pagination ul li.previous a, .pagination ul li.next a, .pagination ul li.disabled span {
+.pagination ul li.previous , .pagination ul li.next {margin-top:5px;}
+.pagination ul li.previous a, .pagination ul li.next active {
 	background-color: #b6b6b6;
 	background-repeat:no-repeat;
 	background-position:center center;
@@ -819,7 +819,7 @@ nav#menu .icon-menu img,
 	height:22px;
 	line-height:22px;
 }
-.pagination ul li.previous a, .pagination ul li.disabled span{
+.pagination ul li.previous a {
 	background-image: url("../images/pag-left.png");
     border-radius: 50%;
     padding: 0;
@@ -830,7 +830,8 @@ nav#menu .icon-menu img,
 background-image: url("../images/pag-right.png");
 }
 .pagination ul li.previous a:hover, .pagination ul li.next a:hover,
-.pagination ul li.previous a.active, .pagination ul li.next a.active, .pagination ul li.disabled span:hover {background-color:#8dc478}
+.pagination ul li.previous a.active, .pagination ul li.next a.active,
+.pagination ul li.disabled span:hover, .pagination ul li a:hover {background-color:#8dc478; color: #fff}
 
 /*Product Details*/
 .product-details {margin-bottom:40px;}
@@ -1254,3 +1255,4 @@ footer .copyright p {margin:0}
 #top-head .user-info ul li a:hover {color:#bbe073}
 .user-welcome{margin: 0 10px}#zeropadding{padding: 0}
 #center_column .panel-title { font-size: 20px }
+#histats_counter { text-align: center; }

@@ -1,7 +1,7 @@
 Mallon
 ------------
 
-![mallon](http://jarvis-store.com/themes/master-tema/mallon/mallon-preview.jpg)
+![mallon](https://s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/img/themes/mallon/mallon-preview.jpg)
 
 Mallon adalah template toko online yang simple dan minimalis. Template ini dilengkapi slider promo pada halaman utama, serta side banner dan fitur subscribe untuk mempromosikan produk anda.
 

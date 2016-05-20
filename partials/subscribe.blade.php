@@ -1,12 +1,10 @@
-<div id="newsletter" class="col-xs-12 col-lg-4 col-md-12">
+<div id="newsletter-foot" class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
     <h4 class="title">Newsletter</h4>
     <div class="block-content">
+        <p>Daftar & Dapatkan penawaran spesial dari <strong>{{Theme::place('title')}}</strong></p>
         <form action="{{@$mailing->action}}" method="post" class="subscribe">
-        	Jangan lewatkan update terbaru dari toko kami dengan bergabung di mailing list kami.
-            <br><br>
-            <p><input type="text" nama="email" placeholder="Masukkan email anda" {{ @$mailing->action==''? 'disabled=""' : ''}}></p>
-            <button class="btn fr" type="submit" {{ @$mailing->action==''?'disabled="disabled" style="opacity: 0.5; cursor: default;"':'' }}>Subscribe</button>
-            <div class="clr"></div>
+            <input class="form-control" nama="email" type="text" placeholder="Email Anda" {{ @$mailing->action==''? 'disabled=""' : ''}}>
+            <button class="btn-newsletter button" value="submit" {{ @$mailing->action==''?'disabled="disabled" style="opacity: 0.5; cursor: default;"':'' }}>Berlangganan</button>
         </form>
     </div>
 </div>

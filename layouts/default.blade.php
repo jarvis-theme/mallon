@@ -3,19 +3,21 @@
     <head>
         {{ Theme::partial('seostuff') }} 
         {{ Theme::asset()->styles() }} 
-        {{ Theme::partial('defaultcss') }}  
+        {{ Theme::partial('defaultcss') }} 
     </head>
     <body> 
         <div class="page">
             {{ Theme::partial('header') }} 
             <section id="main-content">
                 <div class="container">
-                    {{ Theme::place('content') }}  
+                    {{ Theme::place('content') }} 
                 </div>
             </section>
-            {{ Theme::partial('footer') }}  
+            {{ Theme::partial('footer') }} 
         </div>
-        {{ Theme::partial('defaultjs') }}   
-        {{ Theme::partial('analytic') }}    
+
+        {{ pluginPowerup() }} 
+        {{ Theme::partial('defaultjs') }} 
+        {{ Theme::partial('analytic') }} 
     </body>
 </html>
