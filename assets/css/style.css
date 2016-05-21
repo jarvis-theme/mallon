@@ -1255,4 +1255,21 @@ footer .copyright p {margin:0}
 #top-head .user-info ul li a:hover {color:#bbe073}
 .user-welcome{margin: 0 10px}#zeropadding{padding: 0}
 #center_column .panel-title { font-size: 20px }
-#histats_counter { text-align: center; }
+center#paypal > form { width: 100% }
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
+form[name="order"] > input[name="SAVE"] {
+    background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.btn-veritrans { background: #00aee7; border: none; padding: 10px; border-radius: 5px; color: #fff }
+.btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
