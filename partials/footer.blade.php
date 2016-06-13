@@ -76,6 +76,11 @@
                                 </span>
                             </a>
                             @endif
+                            @if(!empty($kontak->picmix))
+                            <a href="{{url($kontak->picmix)}}" target="_blank">
+                                <img class="picmix" src="https://s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/blogs/event/icon-picmix.png" title="Picmix" style="height: 50px;">
+                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>

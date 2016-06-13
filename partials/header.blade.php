@@ -32,6 +32,7 @@
                             <a href="#menu-mobile"></a>
                             <nav id="menu-mobile">
                                 <ul>
+                                @if(count(category_menu()) > 0)
                                     @foreach(category_menu() as $mmenu)
                                     @if($mmenu->parent == '0')
                                     <li>
@@ -59,6 +60,7 @@
                                     </li>
                                     @endif
                                     @endforeach
+                                @endif
                                 </ul>
                             </nav>
                         </div>
@@ -112,6 +114,7 @@
                                 <li class="all_categories dropdown">
                                     <a href="#" data-toggle="dropdown"><i class="fa fa-list"></i> Semua Kategori</a>
                                     <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                    @if(count(category_menu()) > 0)
                                         @foreach(category_menu() as $allmenu)
                                         @if($allmenu->parent == '0')
                                         <li class="dropdown-submenu">
@@ -141,13 +144,16 @@
                                         </li>
                                         @endif
                                         @endforeach
+                                    @endif
                                     </ul>
                                 </li>
-                                @foreach(category_menu() as $menu)
-                                @if($menu->parent == '0')
-                                <li><a href="{{ category_url($menu) }}">{{ $menu->nama }}</a></li>
+                                @if(count(category_menu()) > 0)
+                                    @foreach(category_menu() as $menu)
+                                    @if($menu->parent == '0')
+                                    <li><a href="{{ category_url($menu) }}">{{ $menu->nama }}</a></li>
+                                    @endif
+                                    @endforeach
                                 @endif
-                                @endforeach
                             </ul>
                         </div>
                     </div>
