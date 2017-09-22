@@ -78,7 +78,7 @@
                                         <label class="control-label">Jumlah :</label>
                                         <div class="inlineblock">
                                             <button type="button" class="qtyminus" field="qty" /><i class="fa fa-caret-left"></i></button>
-                                            <input type="text" name="qty" value="1" class="qty" />
+                                            <input type="number" name="qty" value="1" class="qty" pattern="[0-9]" />
                                             <button type="button" value="+" class="qtyplus" field="qty" /><i class="fa fa-caret-right"></i></button>
                                         </div>
                                         <span class="clearfix"></span>

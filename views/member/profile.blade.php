@@ -6,7 +6,7 @@
                 <div id="categories" class="block">
                     <ul class="block-content">
                         <li><a href="{{url('member')}}">Order History</a></li>                         
-                        <li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
+                        <li class="active"><a>Edit Profile</a></li>
                     </ul>
                 </div>
             </div>

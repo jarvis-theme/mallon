@@ -23,7 +23,7 @@
                                 <img class="img-responsive payment" src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku">
                             @endif
                             @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-                                <img class="img-responsive payment" src="{{url('img/bank/veritrans.png')}}" alt="veritrans" title="Veritrans">
+                                <img class="img-responsive payment midtrans" src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans">
                             @endif
                         </div>
                         <div class="col-xs-5 col-sm-5">
