@@ -23,7 +23,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{{$checkouttype==1 ? prefixOrder().$order->kodeOrder : prefixOrder().$order->kodePreorder}}}</td>
+                                <td>{{$checkouttype==1 ? prefixOrder().$order->kodeOrder : prefixOrder().$order->kodePreorder}}</td>
                                 <td>{{$checkouttype==1 ? waktu($order->tanggalOrder) : waktu($order->tanggalPreorder)}}</td>
                                 <td>
                                     <ul>
@@ -119,6 +119,10 @@
                                     <option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label  class="control-label"> Bukti Pembayaran:</label>
+                                <input type="file" name="image" required>
                             </div>
                             <div class="form-group">
                                 <label  class="control-label"> Jumlah:</label>

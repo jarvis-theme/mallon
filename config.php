@@ -11,9 +11,9 @@ return array(
 		"featured"			=> "5",
 		"blog"				=> "5",
 		"testimonial"		=> "6",
-		"image_product"     => "large",
-        "image_slide"       => 1200,
-        "image_mainbanner"  => 750,
-        "image_sidebanner"  => 350
+		"image_product"		=> "large",
+		"image_slide"		=> 1200,
+		"image_mainbanner"	=> 750,
+		"image_sidebanner"	=> 350
 	)
 );

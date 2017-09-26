@@ -1314,7 +1314,7 @@ form[name="order"] > input[name="SAVE"]:hover {
     bottom: -15px;
     left: 32px;
 }
-.name {
+/*.name {
     box-sizing: border-box;
     position: absolute;
     left: 5em;
@@ -1322,7 +1322,7 @@ form[name="order"] > input[name="SAVE"]:hover {
     margin-top: 5px;
     color: #E36902;
     font: 1em/1.4 Georgia, sans-serif;
-}
+}*/
 .updateblog { background-color: #fff }
 .split-orange {
     background: #ffc323;
