@@ -122,7 +122,7 @@ header #top-head {
 #center-header {min-height: 135px;}
 header #logo {
 	text-align:center;
-	/*margin:25px 0px;*/
+    margin-top: -10px;
 }
 header #logo a:hover {opacity:0.9}
 
@@ -945,6 +945,7 @@ background-image: url("../images/pag-right.png");
 .supplier_block .est_shipping p {
 	background: rgba(0, 0, 0, 0) url("../images/icon-estimate.png") no-repeat scroll left top;
     padding-left: 45px;
+    min-height: 32px;
 }
 
 #more_info {margin-bottom:40px;}
@@ -1119,6 +1120,20 @@ footer .copyright p {margin:0}
 /*mobile*/
 .mobile-only {display:none}
 
+/*custom*/
+#prod-right .twitter-share-button { margin-right: 10px !important; }
+.fb_iframe_widget { margin: 10px 10px 0 0 !important; }
+#left_sidebar #best-seller img { max-width: 81px; max-height: 81px; }
+h2.title { font-weight: bold; }
+a.theme { color: #81b011; }
+a.theme:hover { opacity: 0.7; }
+.post { background: #fff; padding: 10px; margin-bottom: 15px; }
+.center{text-align: center}
+.ul{list-style: inside}
+.forget{display: inherit}
+.captcha{width: 60% !important}
+.syarat{margin-bottom: 10px}
+
 @media only screen and (max-width: 1200px) {
 
 }
@@ -1201,7 +1216,7 @@ footer .copyright p {margin:0}
 	nav#menu ul.navbar-nav > li > .dropdown-menu li:last-child {border-bottom:none}
 	nav#menu ul.navbar-nav > li > .dropdown-menu li a {font-size:14px;}
     #more_info ul.nav-tabs li.active a{font-size: 13px}#more_info ul.nav-tabs li a{padding: 10px 15px}
-    .supplier_block .content h4{font-size: 13px}.supplier_block .content p{font-size: 13px; height: 32px}#related-product > h2{font-size: 20px}
+    .supplier_block .content h4{font-size: 13px}.supplier_block .content p{font-size: 13px;}#related-product > h2{font-size: 20px}
 }
 
 @media screen and (max-width: 640px) {
@@ -1215,6 +1230,10 @@ footer .copyright p {margin:0}
     .product_home .block-title h2{font-size: 17px}
     #floor-5 .block-title h2 i.icon-title img{height: 25px; width: auto}
 }
+@media screen and (max-width: 359px){
+    .captcha { width: 100% !important; }
+    .code img { margin-bottom: 5px; }
+}
 @media screen and (min-width: 1200px){
     #left-g a img{display: inline}
 }
@@ -1227,6 +1246,15 @@ footer .copyright p {margin:0}
     .name{text-align: left}.sosmed{text-align: left !important; padding: 0; margin: 10px 0}
     .breadcrumb p, #left_sidebar .block .title h2, .tabs-title-typical h1{font-size: 18px}
     .respond h1.title-create{font-size: 25px}
+    .product-details #prod-center { text-align: center; }
+    .content_price span.lbl { display: block; }
+    .jumlah label { display: block; }
+    #prod-center .avail-info .instock { display: inline-block; }
+    .product-details .button_block .addtocart { margin-right: 0; }
+    input[name="kodeorder"] { margin-bottom: 10px; }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    #prod-right .twitter-share-button { margin-bottom: 10px !important; }
 }
 .payment{display: inline-block; margin-top: 5px}.no-background{background: none !important}#iconstocks{color: #d9534f}.noavail-info > .instock{color: #777}
 #fb{color: #3a5795}#tw{color: #1dc9e2}#gp{color: #df4b38}#pt{color: #bd2126}#tl{color: #34465d}#ig{color: #7c5641}
@@ -1245,7 +1273,6 @@ footer .copyright p {margin:0}
 .qtyminus:hover{background:#e8e8e8;transition:all .5s ease}
 .qtyplus{background:-webkit-linear-gradient(top,white 0%,white 24%,#f7f7f7 77%,#f6f6f6 86%);background:#fff;padding:7px;border-top-right-radius:5px;border-bottom-right-radius:5px;color:#69ba09;border:none;margin:0 -4px;border:1px solid #e8e8e8;outline:none}
 .qtyplus:hover{background:#e8e8e8;transition:all .5s ease}
-.center{text-align: center}.ul{list-style: inside}.forget{display: inherit}.captcha{width: 60% !important}.syarat{margin-bottom: 10px}
 .main-capt{ bottom: 10px }.side-title{ background: #777 !important; border-left: transparent !important }
 .right, .sosmed{text-align: right}.blogtag{padding-left: 0; margin: 0}.login-page{margin: 0 15px}
 .detailmap{float:right;width:100%}.loginform{margin-bottom: 20px}.readme{margin-bottom: 10px}.packing{margin-bottom: 10px}
@@ -1339,4 +1366,4 @@ form[name="order"] > input[name="SAVE"]:hover {
 .news h3 { margin-bottom: 0 }
 .news p { margin-bottom: 5px }
 .pagination ul li.disabled span { background-image: none !important; text-indent: 0 !important; color: #fff }
-.midtrans { padding: 8px; background: #fbfbfb; }
+.midtrans { padding: 8px; background: #fbfbfb; max-height: 35px; }

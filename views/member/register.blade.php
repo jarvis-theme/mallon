@@ -70,14 +70,14 @@
                             <div class="form-group">
                                 <label class="col-md-3">Captcha</label>
                                 <div class="col-md-9">
-                                    <div>
+                                    <div class="code">
                                         {{ HTML::image(Captcha::img(), 'Captcha image', array('class'=>'pull-left')) }}
                                         {{Form::text('captcha','',array('class'=>'form-control captcha','placeholder'=>'Kode captcha'))}}
                                     </div>
                                 </div>
                             </div>
                             <div class="readme">
-                                <input type="checkbox" name="readme" id="inlineCheckbox1" value="1" required> Saya telah membaca dan menyetujui 
+                                <input type="checkbox" name="readme" value="1" required checked> Saya telah membaca dan menyetujui 
                                 <a id="tos" href="{{url('service')}}" target="_blank">Persyaratan Member</a></td>
                             </div>
                             <div class="register">

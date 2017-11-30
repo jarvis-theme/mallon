@@ -5,7 +5,7 @@
 			<div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
 				<div id="categories" class="block">
 					<ul class="block-content">
-						<li class="active"><a>Order History</a></li>                         
+						<li class="active"><a>Order History</a></li>
 						<li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
 					</ul>
 				</div>

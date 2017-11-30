@@ -11,7 +11,7 @@
                         <li>
                             <a href="{{product_url($best)}}">
                                 <div class="img-block">
-                                    <img src="{{product_image_url($best->gambar1, 'thumb')}}" width="81" height="81" alt="{{$best->nama}}" />
+                                    <img src="{{product_image_url($best->gambar1, 'thumb')}}" alt="{{$best->nama}}" />
                                 </div>
                                 <p class="product-name">{{short_description($best->nama, 15)}}</p>
                                 <p class="price">{{price($best->hargaJual)}}</p> 
@@ -33,9 +33,11 @@
                 @endforeach
             </div>
             <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
-                <h1 class="cms-title">{{$data->judul}}</h1>
-                <div class="cms par2">
-                    <h3>{{$data->isi}}</h3>
+                <div class="post">
+                    <h1 class="cms-title">{{$data->judul}}</h1>
+                    <div class="cms par2">
+                        <h3>{{$data->isi}}</h3>
+                    </div>
                 </div>
             </div>
         </div>

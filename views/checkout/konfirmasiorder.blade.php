@@ -97,12 +97,12 @@
                 <div class="row">
                     <div class="col-md-5">
                     @if($order->jenisPembayaran == 1 && $order->status == 0)
-                        @if($checkouttype==1)   
+                        @if($checkouttype==1)
                         {{-- */ $konfirmasi = 'konfirmasiorder/' /* --}}
-                        @else                         
+                        @else
                         {{-- */ $konfirmasi = 'konfirmasipreorder/' /* --}}
                         @endif
-                        {{Form::open(array('url'=> $konfirmasi.$order->id, 'method'=>'put'))}}                            
+                        {{Form::open(array('url'=> $konfirmasi.$order->id, 'method'=>'put'))}}
                             <div class="form-group">
                                 <label  class="control-label"> Nama Pengirim:</label>
                                 <input type="text" class="form-control" placeholder="Nama Pengirim" name='nama' required>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="form-group">
                                 <label  class="control-label"> Jumlah:</label>
-                                @if($checkouttype==1)        
+                                @if($checkouttype==1)
                                 <input type="text" class="form-control" placeholder="Jumlah Transfer" name="jumlah" value="{{$order->status==0 ? $order->total : ''}}" required>
                                 @else
                                     @if($order->status < 2)

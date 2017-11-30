@@ -11,7 +11,7 @@
                         <li>
                             <a href="{{product_url($bestproduk)}}">
                                 <div class="img-block">
-                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'), $bestproduk->nama,array('width'=>'81','height'=>'64','title'=>$bestproduk->nama))}}
+                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'), $bestproduk->nama,array('title'=>$bestproduk->nama))}}
                                 </div>
                                 <p class="product-name">{{short_description($bestproduk->nama,12)}}</p>
                                 <p class="price">{{price($bestproduk->hargaJual)}}</p> 
@@ -57,11 +57,11 @@
                         <form class="col-xs-12 col-md-6" id="zeropadding" method="post" action="{{URL::to('testimoni')}}" role="form">
                             <div class="form-group">
                                 <label for="name">Nama</label>
-                                <input type="text" class="form-control" name="nama" id="name" required>
+                                <input type="text" class="form-control" name="nama" id="name" value="{{Input::old('nama')}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Testimonial</label>
-                                <textarea name="testimonial" class="form-control" rows="3" required></textarea>
+                                <textarea name="testimonial" class="form-control" rows="3" required>{{Input::old('testimonial')}}</textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Kirim Testimonial</button>
                             <button type="reset" class="btn btn-default">Reset</button><br><br>

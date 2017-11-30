@@ -10,20 +10,20 @@
                             @endforeach
                             @foreach(list_payments() as $pay)
                                 @if($pay->nama == 'paypal' && $pay->aktif == 1)
-                                <img class="img-responsive payment" src="{{url('img/bank/paypal.png')}}" alt="Paypal" title="Paypal">
+                                <img class="img-responsive payment" src="//d3kamn3rg2loz7.cloudfront.net/img/bank/paypal.png" alt="Paypal" title="Paypal">
                                 @endif
                                 @if($pay->nama == 'ipaymu' && $pay->aktif == 1)
-                                <img class="img-responsive payment" src="{{url('img/bank/ipaymu.jpg')}}" alt="Ipaymu" title="Ipaymu">
+                                <img class="img-responsive payment" src="//d3kamn3rg2loz7.cloudfront.net/img/bank/ipaymu.jpg" alt="Ipaymu" title="Ipaymu">
                                 @endif
                                 @if($pay->nama == 'bitcoin' && $pay->aktif == 1)
-                                <img class="img-responsive payment" src="{{url('img/bitcoin.png')}}" alt="Bitcoin" title="Bitcoin">
+                                <img class="img-responsive payment" src="//d3kamn3rg2loz7.cloudfront.net/img/bitcoin.png" alt="Bitcoin" title="Bitcoin">
                                 @endif
                             @endforeach
                             @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
-                                <img class="img-responsive payment" src="{{url('img/bank/doku.jpg')}}" alt="Doku" title="Doku">
+                                <img class="img-responsive payment" src="//d3kamn3rg2loz7.cloudfront.net/img/bank/doku.jpg" alt="Doku" title="Doku">
                             @endif
                             @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-                                <img class="img-responsive payment midtrans" src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans">
+                                <img class="img-responsive payment midtrans" src="//d3kamn3rg2loz7.cloudfront.net/img/bank/midtrans.png" alt="Midtrans" title="Midtrans">
                             @endif
                         </div>
                         <div class="col-xs-5 col-sm-5">
@@ -78,7 +78,7 @@
                             @endif
                             @if(!empty($kontak->picmix))
                             <a href="{{url($kontak->picmix)}}" target="_blank">
-                                <img class="picmix" src="https://s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/blogs/event/icon-picmix.png" title="Picmix" style="height: 50px;">
+                                <img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png" title="Picmix" style="height: 50px;">
                             </a>
                             @endif
                         </div>
@@ -115,9 +115,6 @@
                                         Email : <a href="mailto:{{$kontak->email}}"> {{$kontak->email}}</a><br>
                                         Alamat : {{$kontak->alamat}} 
                                     </p>
-                                    @if(!empty($kontak->ym))
-                                    <p>{{ ymyahoo($kontak->ym) }}</p>
-                                    @endif
                                 </div>
                             </div>
                         </div>

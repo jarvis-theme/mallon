@@ -6,40 +6,56 @@
                             <div id="prod-left" class="col-lg-4 col-xs-12 col-sm-4">
                                 <div class="big-image">
                                     <img src="{{product_image_url($produk->gambar1, 'medium')}}" srcset="{{product_image_url($produk->gambar1, 'thumb')}} 768w, {{product_image_url($produk->gambar1, 'large')}} 1200w" width="899" alt="{{$produk->nama}}" />
-                                    <a class="zoom fancybox" href="{{product_image_url($produk->gambar1, 'large')}}" title="{{$produk->nama}}">&nbsp;</a>
+                                    <a class="zoom fancybox" href="{{product_image_url($produk->gambar1, 'large')}}" title="{{$produk->nama}}" rel="{{$produk->nama}}">&nbsp;</a>
                                 </div>
+                                {{--*/ $x=0; /*--}}
+                                @if($produk->gambar1!='')
+                                {{--*/ $x++; /*--}}
+                                @endif
+                                @if($produk->gambar2!='')
+                                {{--*/ $x++; /*--}}
+                                @endif
+                                @if($produk->gambar3!='')
+                                {{--*/ $x++; /*--}}
+                                @endif
+                                @if($produk->gambar4!='')
+                                {{--*/ $x++; /*--}}
+                                @endif
+
+                                @if($x > 1)
                                 <div id="thumb-view">
                                     <ul id="thumb-list" class="owl-carousel owl-theme">
                                         @if($produk->gambar1 != '')
                                         <li class="item">
-                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar1,'large')}}" title="{{$produk->nama}}">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar1,'large')}}" title="{{$produk->nama}}" rel="{{$produk->nama}}">
                                             {{HTML::image(product_image_url($produk->gambar1,'thumb'),'gambar1',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar2 != '')
                                         <li class="item">
-                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar2,'large')}}" title="{{$produk->nama}}">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar2,'large')}}" title="{{$produk->nama}}" rel="{{$produk->nama}}">
                                             {{HTML::image(product_image_url($produk->gambar2,'thumb'),'gambar2',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar3 != '')
                                         <li class="item">
-                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar3,'large')}}" title="{{$produk->nama}}">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar3,'large')}}" title="{{$produk->nama}}" rel="{{$produk->nama}}">
                                             {{HTML::image(product_image_url($produk->gambar3,'thumb'),'gambar3',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                         @if($produk->gambar4 != '')
                                         <li class="item">
-                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar4,'large')}}" title="{{$produk->nama}}">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar4,'large')}}" title="{{$produk->nama}}" rel="{{$produk->nama}}">
                                             {{HTML::image(product_image_url($produk->gambar4,'thumb'),'gambar4',array('width'=>'130'))}}
                                             </a>
                                         </li>
                                         @endif
                                     </ul>
                                 </div>
+                                @endif
                             </div>
                             <div id="prod-center" class="col-lg-5 col-xs-12 col-sm-5">
                                 <h2 class="name-title">{{$produk->nama}}</h2>

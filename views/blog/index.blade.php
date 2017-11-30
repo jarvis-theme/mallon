@@ -23,7 +23,7 @@
                         <li>
                             <a href="{{product_url($bestproduk)}}">
                                 <div class="img-block">
-                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'),$bestproduk->nama,array('width'=>'81','height'=>'64','title'=>$bestproduk->nama))}}
+                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'),$bestproduk->nama,array('title'=>$bestproduk->nama))}}
                                 </div>
                                 <p class="product-name">{{short_description($bestproduk->nama,12)}}</p>
                                 <p class="price">{{price($bestproduk->hargaJual)}}</p> 
@@ -54,17 +54,19 @@
                 <div class="tabs-description">
                     @if(count(list_blog(null,@$blog_category)) > 0)
                         @foreach(list_blog(null,@$blog_category) as $blogs)
-                        <h3 class="title"><a href="{{blog_url($blogs)}}">{{$blogs->judul}}</a></h3>
-                        <p>
-                            <small><i class="fa fa-calendar"></i> {{waktuTgl($blogs->updated_at)}}</small>&nbsp;&nbsp;
-                            @if(!empty($blogs->kategori->nama))
-                            <span class="date-post"><i class="fa fa-tags"></i> <a href="{{blog_category_url(@$blogs->kategori)}}">{{@$blogs->kategori->nama}}</a></span>
-                            @endif
-                        </p>
-                        <p>
-                            {{shortDescription($blogs->isi,300)}}<br>
-                            <a href="{{blog_url($blogs)}}" class="theme">Baca Selengkapnya →</a>
-                        </p>
+                        <div class="post">
+                            <h2 class="title"><a href="{{blog_url($blogs)}}">{{$blogs->judul}}</a></h2>
+                            <p>
+                                <small><i class="fa fa-calendar"></i> {{waktuTgl($blogs->updated_at)}}</small>&nbsp;&nbsp;
+                                @if(!empty($blogs->kategori->nama))
+                                <span class="date-post"><i class="fa fa-tags"></i> <a href="{{blog_category_url(@$blogs->kategori)}}">{{@$blogs->kategori->nama}}</a></span>
+                                @endif
+                            </p>
+                            <p>
+                                {{shortDescription($blogs->isi,300)}}<br>
+                                <a href="{{blog_url($blogs)}}" class="theme">Baca Selengkapnya →</a>
+                            </p>
+                        </div>
                         @endforeach
                         {{list_blog(null,@$blog_category)->links()}}
                     @else

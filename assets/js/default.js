@@ -28,6 +28,12 @@ define(['jquery','fancybox','carousel','bootstrap','modernizr','scrollto','mmenu
                 pagination: false,
                 navigationText: false
             });
+            $("#owl-new").owlCarousel({
+                navigation : true,
+                slideSpeed : 300,
+                paginationSpeed : 400,
+                singleItem:true
+            });
             
             $('#menu-mobile').mmenu({
                 extensions  : [ 'effect-slide-menu', 'pageshadow' ],

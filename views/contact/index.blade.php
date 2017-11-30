@@ -11,7 +11,7 @@
                         <li>
                             <a href="{{product_url($bestproduk)}}">
                                 <div class="img-block">
-                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'),$bestproduk->nama,array('width'=>'81','height'=>'64','title'=>$bestproduk->nama))}}
+                                    {{HTML::image(product_image_url($bestproduk->gambar1,'thumb'),$bestproduk->nama,array('title'=>$bestproduk->nama))}}
                                 </div>
                                 <p class="product-name">{{short_description($bestproduk->nama,12)}}</p>
                                 <p class="price">{{price($bestproduk->hargaJual)}}</p> 
@@ -40,7 +40,7 @@
             </div>
             <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8">
                 <div class="tabs-description">
-                    <div class="col-md-12 col-xs-12">         
+                    <div class="col-md-12 col-xs-12">
                         <div class="maps" >
                             <h2 class="title">Peta Lokasi</h2>
                             @if($kontak->lat!='0' || $kontak->lng!='0')

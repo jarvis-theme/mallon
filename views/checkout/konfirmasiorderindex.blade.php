@@ -6,7 +6,7 @@
 				<div class="contact-form">
 					<p>Silakan masukkan kode order yang mau anda cari!</p>
 					{{Form::open(array('url'=>'konfirmasiorder','method'=>'post','class'=>'form-inline'))}}
-						<input class="form-control" type="text" placeholder="Kode Order" name='kodeorder' required>
+						<input class="form-control" type="text" placeholder="Kode Order" name="kodeorder" required>
 						<button class="find-code btn btn-success" type="submit"><span> Cari Kode</span></button>
 					{{Form::close()}}
 				</div>
